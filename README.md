@@ -1,50 +1,50 @@
 # Bottom Up Demo
 
-Este proyecto es una demostración simple de arquitectura "bottom-up" en Python, donde un componente de bajo nivel (`TaxCalculator`) se integra en un servicio de nivel medio (`InvoiceService`).
+This project is a simple demonstration of a "bottom-up" architecture in Python, where a low-level component (`TaxCalculator`) is integrated into a mid-level service (`InvoiceService`).
 
-## Estructura del proyecto
+## Project structure
 
-- `src/` Contiene la lógica de negocio principal.
-  - `tax_calculator.py`: calcula impuestos según la región.
-  - `invoice_service.py`: crea facturas usando el calculador de impuestos.
-- `tests/` Contiene las pruebas unitarias e integración.
+- `src/` contains the main business logic.
+  - `tax_calculator.py`: calculates taxes based on the region.
+  - `invoice_service.py`: creates invoices using the tax calculator.
+- `tests/` contains unit and integration tests.
   - `test_layer1_tax.py`
   - `test_layer2_invoice.py`
 
-## Requisitos
+## Requirements
 
-- Python 3.9 o superior
+- Python 3.9 or higher
 - `pytest`
 
-## Instalación
+## Installation
 
-1. Crear un entorno virtual:
+1. Create a virtual environment:
 
 ```bash
 python -m venv .venv
 ```
 
-2. Activar el entorno virtual:
+2. Activate the virtual environment:
 
-En Windows PowerShell:
+In Windows PowerShell:
 
 ```powershell
 .venv\Scripts\Activate.ps1
 ```
 
-3. Instalar dependencias:
+3. Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Ejecutar pruebas
+## Running tests
 
 ```bash
 pytest -v
 ```
 
-## Ejemplo de uso
+## Usage example
 
 ```python
 from src.tax_calculator import TaxCalculator
@@ -57,4 +57,4 @@ invoice = service.create_invoice(200.0, "EU")
 print(invoice)
 ```
 
-Este ejemplo devuelve una factura con subtotal, impuesto y total calculados.
+This example returns an invoice with subtotal, tax, and total calculated.
